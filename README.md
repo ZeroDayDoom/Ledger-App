@@ -24,20 +24,20 @@ A single-file, installable web app for tracking cash expenses, income, and IOUs.
 ## Project structure
 
 ```
-ledger-pwa/
 ├── index.html      # the entire app (markup, styles, logic)
-├── manifest.json    # app name, icons, standalone display mode
-├── sw.js            # service worker — caches the app shell for offline use
-├── icon-192.png      # home screen icon (192×192)
-└── icon-512.png      # home screen icon (512×512)
+├── manifest.json   # app name, icons, standalone display mode
+├── sw.js           # service worker — caches the app shell for offline use
+├── icon-192.png    # home screen icon (192×192)
+└── icon-512.png    # home screen icon (512×512)
 ```
 
 ## Running it locally
 
 Any static file server works, since service workers require HTTP(S) (not `file://`):
 
+From the repository root (service workers require HTTP(S), not `file://`):
+
 ```bash
-cd ledger-pwa
 python3 -m http.server 8000
 ```
 
@@ -47,7 +47,7 @@ Then open `http://localhost:8000` in a browser.
 
 Host the folder anywhere that serves static files over HTTPS:
 
-- **Netlify Drop** — drag the `ledger-pwa` folder onto [app.netlify.com/drop](https://app.netlify.com/drop) for an instant live URL
+- **Netlify Drop** — drag this repository folder onto [app.netlify.com/drop](https://app.netlify.com/drop) for an instant live URL
 - **GitHub Pages** — push the folder to a repo, enable Pages on the `main` branch
 
 ## Installing on your phone
